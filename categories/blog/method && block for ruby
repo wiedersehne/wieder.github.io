@@ -14,6 +14,14 @@ BLOCK
 The capitalize method capitalizes a word (see the Hint for how this is done), and we can continually invoke the capitalize method by name. We can capitalize("matz"), capitalize("eduardo"), or any string we like to our hearts' content.
 
 However, the block that we define (following .each) will only be called once, and in the context of the array that we are iterating over. It appears just long enough to do some work for each, then vanishes into the night.
+利用块排序
+books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
 
+# To sort our books in ascending order, in-place//升序
+books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+
+# Sort your books in descending order, in-place below//降序
+
+books.sort! {|secondbook,firstbook| firstbook<=>secondbook}
 
  
